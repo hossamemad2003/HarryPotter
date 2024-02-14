@@ -1,0 +1,120 @@
+* {
+    box-sizing: content-box;
+    margin: 0;
+}
+
+.header {
+    height: 200px;
+    background-color: #2c3e50;
+}
+.header h1 {
+    text-align: center;
+    padding-top: 100px;
+    font-size: xx-large;
+    color: white;
+}
+.header h1::after {
+    content: "";
+    animation-name: wordAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes wordAnimation {
+    0% {
+        content: "|";
+        opacity: 0.2;
+    }
+    10% {
+        content: "h|";
+    }
+    20% {
+        content: "ha|";
+    }
+    30% {
+        content: "harr|";
+    }
+    40% {
+        content: "harry|";
+    }
+    50% {
+        content: "harry p|";
+    }
+    60% {
+        content: "harry po|";
+    }
+    70% {
+        content: "harry pot|";
+    }
+    80% {
+        content: "harry pott|";
+    }
+    90% {
+        content: "harry potte|";
+    }
+    100% {
+        content: "harry potter|";
+        opacity: 1;
+    }
+}
+.container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    position: relative;
+}
+.container .box {
+    margin: 20px;
+    height: 480px;
+    background-color: rgb(243, 243, 243);
+    flex-direction: column;
+}
+.container .box img {
+    justify-content: center;
+    width: 80%;
+    height: 250px;
+    padding-left: 25px;
+    padding-top: 20px;
+}
+.container .box p {
+    margin-top: 20px;
+    padding-top: 10px;
+    border: 2px solid;
+    border-color: #2c3e50 transparent transparent transparent;
+    text-align: center;
+    font-size: larger;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container .box p span {
+    color: rgb(245, 32, 32);
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(102, 45, 45);
+    outline: none;
+    color: white;
+    text-align: center;
+    position: relative;
+    left: 50%;
+}
+button:hover {
+    cursor: pointer;
+}
+
+.footer {
+    margin-top: 20px;
+    background-color: #2c3e50;
+    height: 150px;
+    text-align: center;
+}
+.footer p {
+    padding-top: 50px;
+    color: aliceblue;
+    font-size: 40px;
+}
